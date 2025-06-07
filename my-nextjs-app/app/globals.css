@@ -40,3 +40,83 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Added styles for Habit Tracker */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  min-height: 100vh;
+  padding-top: 2rem; /* Add some padding at the top */
+  background-color: #f0f0f0; /* Lighter background for the page */
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222; /* Darker background for dark mode */
+  }
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  input[type="text"] {
+    border-color: #555;
+    background-color: #333;
+    color: var(--foreground);
+  }
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #0070f3;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.25rem; /* Add small margin to separate buttons */
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+@media (prefers-color-scheme: dark) {
+  button {
+    background-color: #0056b3; /* Slightly adjusted for dark mode */
+  }
+  button:hover {
+    background-color: #004494;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem; /* Add margin above the list */
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (prefers-color-scheme: dark) {
+  li {
+    border-bottom-color: #444;
+  }
+}
+
+li:last-child {
+  border-bottom: none;
+}

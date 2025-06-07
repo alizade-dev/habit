@@ -166,3 +166,42 @@ a.secondary {
     filter: invert();
   }
 }
+
+/* Styles for the Habit Tracker Page */
+.habitTrackerContainer {
+  background-color: var(--background); /* Use existing CSS var for background */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Max width for the tracker */
+  margin: 0 auto; /* Center it if body wasn't display:flex */
+}
+
+@media (prefers-color-scheme: dark) {
+  .habitTrackerContainer {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
+  }
+}
+
+.addHabitGroup {
+  display: flex;
+  margin-bottom: 1.5rem; /* Space below the input group */
+}
+
+.addHabitGroup input[type="text"] {
+  flex-grow: 1; /* Input takes available space */
+  margin-right: 0.5rem; /* Keep margin from global styles */
+}
+
+.habitItem {
+  /* Uses global li styles for flex, padding, border */
+  /* Specific habit item styles can be added here if needed */
+  /* For example, if we wanted a different background for items */
+}
+
+.habitItem span {
+  margin-right: 0.5rem; /* Space between name and button */
+  flex-grow: 1; /* Text takes available space */
+  word-break: break-word; /* Prevent long text from breaking layout */
+}
